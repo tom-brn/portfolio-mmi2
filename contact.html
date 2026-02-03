@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio MMI2</title>
+
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+
+    <!-- GLOBAL -->
+    
+
+    <div class="page-transition"></div>
+
+    <nav class="nav-desktop">
+    <a href="home.html" class="un" data-color="rgb(66,66,157)">Home</a>
+    <a href="projets.html" class="deux" data-color="rgb(127,23,192)">Projets</a>
+    <a href="about.html" class="trois" data-color="rgb(255,0,179)">À propos</a>
+    <a href="contact.html" class="quatre" data-color="rgb(255,0,115)">Contact</a>
+    </nav>
+
+    <nav class="nav-mobile" role="dialog" aria-modal="true">
+    <a href="home.html" style="text-decoration: underline rgb(66,66,157);" data-color="rgb(66,66,157)">Home</a>
+    <a href="projets.html" style="text-decoration: underline rgb(127,23,192);" data-color="rgb(127,23,192)">Projets</a>
+    <a href="about.html" style="text-decoration: underline rgb(255,0,179);" data-color="rgb(255,0,179)">À propos</a>
+    <a href="contact.html" style="text-decoration: underline rgb(255,0,115);" data-color="rgb(255,0,115)">Contact</a>
+    </nav>
+
+    <button class="burger">
+    <span></span><span></span><span></span>
+    </button>
+
+    <div class="bottom">
+    <div class="un"></div>
+    <div class="deux"></div>
+    <div class="trois"></div>
+    <div class="quatre"></div>
+    </div>
+
+
+    <!-- PAGE -->
+
+
+    <main class="content">
+
+
+    <div class="logo"><a href="index.html">Tom Beaurain</a></div>
+
+        
+    <div id="titlebox">
+    <h1>Rentrons en <span style="color: rgb(255,0,115);">contact</span></h1>
+    <p>Vous pouvez me contacter via ce formulaire pour toute question, projet ou collaboration. Je serai ravi d'échanger avec vous</p>
+    </div>
+
+    <div id="tip-desk"><h4>Ce portfolio étant hébergé par GitHub Pages, cette fonctionnalité n'est pas disponible pour le moment, en attendant vous pouvez m'écrire un mail directement à <br><strong>tom.beaurain22@gmail.com</strong></h4></div>
+    <div id="tip-mobile"><h4>Ce portfolio étant hébergé par GitHub Pages, cette fonctionnalité n'est pas disponible pour le moment, en attendant vous pouvez m'écrire un mail directement à <br><strong>tom.beaurain22@gmail.com</strong></h4></div>
+    
+
+    <div id="form-message" class="form-message"></div>
+
+    <form id="contact-form" action="" method="post" class="contact-box">
+
+    <h2>Me contacter</h2>
+
+    <div style="display: none;">
+        <label>Ne remplissez pas ceci</label>
+        <input type="text" name="website" value="">
+    </div>
+
+
+    <div class="form-group">
+        <label for="mail">Adresse e-mail</label>
+        <input id="mail" name="mail" type="email" placeholder="Votre adresse mail" required>
+    </div>
+
+    <div class="form-group">
+        <label for="objet">Objet</label>
+        <input id="objet" name="objet" type="text" placeholder="Sujet de votre message" required>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="12" placeholder="Votre message..." required></textarea>
+    </div>
+
+     <button type="submit" class="submit-btn"> 
+        Envoyer le message
+    </button>
+
+    </form>
+
+    </main>
+
+
+    <script>
+        // si l'URL contient ?sent=1, on affiche le message
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('sent') === '1') {
+        const msgDiv = document.getElementById('form-message');
+        msgDiv.textContent = "Votre message a été envoyé avec succès !";
+        }
+    </script>
+    <script src="js/transition.js"></script>
+    <script src="js/nav.js"></script>
+
+</body>
+</html>

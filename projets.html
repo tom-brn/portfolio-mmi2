@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio MMI2</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/projets.css">
+</head>
+<body>
+
+
+    <!-- GLOBAL -->
+    
+
+    <div class="page-transition"></div>
+
+    <nav class="nav-desktop">
+    <a href="home.html" class="un" data-color="rgb(66,66,157)">Home</a>
+    <a href="projets.html" class="deux" data-color="rgb(127,23,192)">Projets</a>
+    <a href="about.html" class="trois" data-color="rgb(255,0,179)">À propos</a>
+    <a href="contact.html" class="quatre" data-color="rgb(255,0,115)">Contact</a>
+    </nav>
+
+    <nav class="nav-mobile" role="dialog" aria-modal="true">
+    <a href="home.html" style="text-decoration: underline rgb(66,66,157);" data-color="rgb(66,66,157)">Home</a>
+    <a href="projets.html" style="text-decoration: underline rgb(127,23,192);" data-color="rgb(127,23,192)">Projets</a>
+    <a href="about.html" style="text-decoration: underline rgb(255,0,179);" data-color="rgb(255,0,179)">À propos</a>
+    <a href="contact.html" style="text-decoration: underline rgb(255,0,115);" data-color="rgb(255,0,115)">Contact</a>
+    </nav>
+
+    <button class="burger">
+    <span></span><span></span><span></span>
+    </button>
+
+    <div class="bottom">
+    <div class="un"></div>
+    <div class="deux"></div>
+    <div class="trois"></div>
+    <div class="quatre"></div>
+    </div>
+
+
+    <!-- PAGE -->
+
+
+    <main class="content">
+
+    <div class="logo"><a href="index.html">Tom Beaurain</a></div>
+
+        
+    <div id="titlebox">
+    <h1>Découvrez mes <span style="color: rgb(255,0,115);">projets</span></h1>
+    <p style="text-align: center;">Retrouvez mes travaux réalisés en BUT MMI répertoriés en trois catégories : <b style="color: rgb(66,66,157);">Développement</b>, <b style="color: rgb(127,23,192);">Graphisme</b> et <b style="color: rgb(255,0,179)">Audiovisuel</b></p>
+    </div>
+
+    <div id="tip-desk">Pour passer d'un projet à l'autre vous pouvez utiliser les flèches du clavier</div>
+    <div id="tip-mobile">Pour passer d'un projet à l'autre vous pouvez balayer les projets de droite à gauche</div>
+
+
+<!-- ================= CATÉGORIES ================= -->
+
+    <section class="box" id="dev">
+        <h2>Développement</h2>
+
+        <div class="cards" id="devCards">
+
+            <div class="card" data-title="Dashboard des données météorologiques de l'Aisne" data-skills="HTML,CSS,JS,PHP,SQL" 
+            
+            data-text="
+            Dans le cadre de la SAÉ 303, j’ai développé une visualisation interactive des données climatologiques pour le département de l’Aisne.
+            À partir d’un fichier SQL couvrant les années 1950 à 2023, j’ai analysé les indicateurs clés du climat local pour mettre en évidence l’évolution du réchauffement, même dans une région historiquement stable.
+            La page web regroupe des graphiques synthétiques accompagnés de descriptions claires, permettant de comprendre comment les changements progressifs du climat peuvent menacer les écosystèmes en place depuis longtemps. Mon travail a consisté à sélectionner les informations pertinentes, à les traduire en visualisations intuitives et à rendre le tout compréhensible pour un public large, tout en respectant les objectifs de communication du projet.
+            " 
+            
+            data-link="https://beaurtom.tpweb.univ-rouen.fr/sae303/dashboard.php" data-img="images/dash_vertical.png">
+
+                <div class="thumb" style="background-image:url('images/dash.png')"></div>
+                <div class="content">
+                <h4>Dashboard de l'Aisne</h4>
+                <p>Création d'un tableau de bord à l'aide de données météorologiques</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="box" id="graph">
+
+        <h2>Graphisme</h2>
+
+        <div class="cards" id="designCards">
+
+            <div class="card" data-title="Illustration réchauffement climatique" data-skills="Illustrator" 
+
+            data-text="
+            Cette illustration propose une vision dystopique d’un monde transformé par le réchauffement climatique. À travers un univers volontairement simple et symbolique, j’ai cherché à représenter l’absurdité d’une société qui aurait ignoré les enjeux environnementaux.
+            Le décor désertique, inspiré des paysages arides, contraste avec les vestiges d’une ville reconnaissable, située à Paris. La présence d’un soleil exagérément imposant et l’absence de toute vie humaine renforcent le message et invitent à réfléchir aux conséquences d’un manque d’action face à l’urgence climatique.
+            " 
+                        
+            data-link="images/illustration_paris.pdf" data-img="images/illustration_paris.png">
+
+                <div class="thumb" style="background-image:url('images/illustration_paris.png')"></div>
+                <div class="content">
+                <h4>Illustration réchauffement climatique</h4>
+                <p>Création d'une affiche mettant en scène un futur dystopique</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="box" id="audiovisuel">
+
+        <h2>Audiovisuel</h2>
+
+        <div class="cards" id="videoCards">
+
+            <div class="card" data-title="Interview Maison Sport Santé" data-skills="Premiere Pro" 
+            
+            data-text="
+            Ce projet audiovisuel consistait en la réalisation d’une interview et d’une séance d’entraînement pour la Maison Sport Santé d’Elbeuf, en collaboration avec l’IUT MMI d’Elbeuf.
+            La première partie de la vidéo met en lumière le témoignage d’une bénéficiaire diabétique, qui partage son expérience et les bénéfices de l’activité physique adaptée à son quotidien. La seconde partie illustre une séance type encadrée par un coach, offrant un aperçu concret de l’accompagnement proposé.
+            Mon rôle a consisté à filmer, monter et structurer la vidéo pour que le message soit clair et engageant, tout en respectant la sensibilité du sujet. L’objectif était de produire un contenu à la fois informatif et immersif, valorisant les pratiques de la Maison Sport Santé et la participation des bénéficiaires.               
+            "
+            
+            data-link="https://youtu.be/LkrxbSXTXEU"  data-img="images/Maisons-sport-sante.png">
+
+                <div class="thumb" style="background-image:url('images/Maisons-sport-sante.png')"></div>
+                <div class="content">
+                <h4>Interview Maison Sport Santé</h4>
+                <p>Interview d'une bénéficiaire de la Maison Sport Santé</p>
+                </div>
+            </div>
+
+            <div class="card" data-title="Réalisation Montage Crescendo" data-skills="Premiere Pro,Adobe Audition" 
+            
+            data-text="
+            Dans le cadre d’un travail dirigé, j’ai réalisé un film exploitant la technique du montage crescendo. Nous nous sommes inspirés des montages expérimentaux et constructivistes du 20ᵉ siècle, en jouant sur le rythme et la progression visuelle pour créer une tension et une dynamique croissante.
+            La création de la bande sonore originale a été réalisée à l’aide de boucles musicales sur Adobe Audition, afin de renforcer le rythme et l’impact émotionnel du montage. Mon rôle a couvert la planification des séquences, le montage vidéo et la conception sonore, avec pour objectif de produire un contenu cohérent, immersif et rythmé, illustrant la puissance narrative d’un montage crescendo.
+            " 
+            
+            data-link="https://youtu.be/i6wnjSv2cec" data-img="images/crescendo_vertical.png">
+
+                <div class="thumb" style="background-image:url('images/crescendo.png')"></div>
+                <div class="content">
+                <h4>Réalisation Montage crescendo</h4>
+                <p>Création d'un montage crescendo et d'une musique originale</p>
+                </div>
+            </div>
+        
+        </div>
+
+    </section>
+
+<!-- POPUP -->
+    <div id="popup" class="popup-overlay">
+    <div class="popup">
+        <span class="close" onclick="closePopup()">✕</span>
+        <div class="popup-image" id="popupImage"></div>
+        <div class="popup-content">
+        <h2 id="popupTitle"></h2>
+        <div class="skills" id="popupSkills"></div>
+        <div class="popup-text" id="popupText"></div>
+        <a id="popupLink" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+    </div>
+    </div>
+
+    </main>
+
+
+<script>
+const cards = document.querySelectorAll('.card');
+const popup = document.getElementById('popup');
+const popupImage = document.getElementById('popupImage');
+const popupTitle = document.getElementById('popupTitle');
+const popupSkills = document.getElementById('popupSkills');
+const popupLink = document.getElementById('popupLink');
+const popupText = document.getElementById('popupText');
+const popupContent = document.querySelector('.popup-content');
+
+let currentIndex = 0;
+
+// OUVERTURE
+cards.forEach((card, i) => {
+  card.addEventListener('click', () => {
+    currentIndex = i;
+    openPopup();
+  });
+});
+
+function openPopup() {
+  updatePopupContent();
+  popup.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+// MISE À JOUR DU CONTENU
+function updatePopupContent(direction = null) {
+  const card = cards[currentIndex];
+
+  // Animation : ajout de classes selon la direction
+  if (direction) {
+    popupContent.classList.add(
+      direction === 'next' ? 'slide-next-out' : 'slide-prev-out'
+    );
+
+    setTimeout(() => {
+      setContent(card);
+      popupContent.classList.remove('slide-next-out', 'slide-prev-out');
+      popupContent.classList.add(
+        direction === 'next' ? 'slide-next-in' : 'slide-prev-in'
+      );
+
+      setTimeout(() => {
+        popupContent.classList.remove('slide-next-in', 'slide-prev-in');
+      }, 300);
+    }, 200);
+  } else {
+    setContent(card);
+  }
+}
+
+function setContent(card) {
+  popupTitle.textContent = card.dataset.title;
+
+  // compétences
+  popupSkills.innerHTML = "";
+  card.dataset.skills.split(',').forEach(skill => {
+    const span = document.createElement('div');
+    span.className = 'skill';
+    span.textContent = skill;
+    popupSkills.appendChild(span);
+  });
+
+  // lien projet
+  if (card.dataset.link) {
+    popupLink.href = card.dataset.link;
+    popupLink.textContent = "Voir le projet ↗";
+    popupLink.style.display = "inline-block";
+  } else {
+    popupLink.style.display = "none";
+  }
+
+  // texte
+  const rawText = card.dataset.text || "";
+  popupText.innerHTML = rawText.replace(
+    /(https?:\/\/[^\s]+)/g,
+    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+  );
+
+  // IMAGE avec fondu
+  popupImage.style.opacity = 0;
+  setTimeout(() => {
+    popupImage.style.backgroundImage = `url(${card.dataset.img})`;
+    popupImage.style.opacity = 1;
+  }, 150);
+
+  // reset scroll
+  popupContent.scrollTop = 0;
+}
+
+// FERMETURE
+function closePopup() {
+  popup.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// NAVIGATION clavier
+document.addEventListener('keydown', e => {
+  if (!popup.classList.contains('active')) return;
+
+  if (e.key === "ArrowRight") navigate('next');
+  if (e.key === "ArrowLeft") navigate('prev');
+  if (e.key === "Escape") closePopup();
+});
+
+// SWIPE MOBILE
+let startX = 0;
+popup.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+popup.addEventListener('touchend', e => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = endX - startX;
+  if (Math.abs(diff) < 50) return;
+  diff > 0 ? navigate('prev') : navigate('next');
+});
+
+// NAVIGATION commune
+function navigate(direction) {
+  if (direction === 'next') {
+    currentIndex = (currentIndex + 1) % cards.length;
+  } else {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  }
+  updatePopupContent(direction);
+}
+
+// FERMETURE clic overlay
+popup.addEventListener('click', e => {
+  if (e.target === popup) closePopup();
+});
+</script>
+
+
+<script src="js/transition.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>

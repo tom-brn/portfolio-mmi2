@@ -1,0 +1,334 @@
+/* ==================================================
+   BASE
+================================================== */
+
+section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  padding-left: 12px;
+}
+
+/* ==================================================
+   CARTES
+================================================== */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.card {
+  background: #111;
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+  border: solid 1px white;
+}
+
+.card .thumb {
+  height: 160px;
+  background: linear-gradient(135deg,#444,#222);
+  background-size: cover;
+  background-position: center;
+}
+
+.card .content {
+  padding: 15px;
+}
+
+.card .content h4 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.card .content p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ==================================================
+   POPUP OVERLAY
+================================================== */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 100;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==================================================
+   POPUP CONTAINER
+================================================== */
+
+.popup {
+  background: #222;
+  width: 90%;
+  max-width: 900px;
+  height: 70vh;
+
+  border-radius: 24px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+
+  transform: scale(0.96);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.popup-overlay.active .popup {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ==================================================
+   POPUP IMAGE
+================================================== */
+
+.popup-image {
+  width: 45%;
+  background-size: cover;
+  background-position: center;
+
+  /* AJOUT */
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+
+/* ==================================================
+   POPUP CONTENT (SCROLLABLE)
+================================================== */
+
+.popup-content {
+  width: 55%;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+/* TITRE */
+.popup-content h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* COMPÉTENCES */
+.popup-content .skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.popup-content .skills .skill {
+  background: rgb(54, 54, 54);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* TEXTE */
+.popup-text {
+  margin-top: 10px;
+}
+
+/* LIEN */
+#popupLink {
+  margin: 10px 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(137, 218, 255);
+
+}
+
+#popupLink:hover {
+  text-decoration: underline;
+}
+
+/* ==================================================
+   ANIMATIONS DE NAVIGATION (CLAVIER / SWIPE)
+================================================== */
+
+.popup-content {
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+}
+
+/* NEXT */
+.slide-next-out {
+  animation-name: slideNextOut;
+}
+.slide-next-in {
+  animation-name: slideNextIn;
+}
+
+/* PREV */
+.slide-prev-out {
+  animation-name: slidePrevOut;
+}
+.slide-prev-in {
+  animation-name: slidePrevIn;
+}
+
+@keyframes slideNextOut {
+  to {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideNextIn {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidePrevOut {
+  to {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+}
+
+@keyframes slidePrevIn {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ==================================================
+   BOUTON FERMER
+================================================== */
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 720px) {
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .popup {
+    flex-direction: column;
+    height: 80vh;
+  }
+
+  .popup-image {
+    display: none;
+  }
+
+  .popup-content {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* ==================================================
+   CATÉGORIES
+================================================== */
+
+.box {
+  border-radius: 25px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+/* DEV */
+#dev {
+  background-color: rgba(66, 66, 157, 0.297);
+  border: 2px solid rgb(66, 66, 157);
+}
+#dev h2 {
+  border-left: 5px solid rgb(66, 66, 157);
+}
+#devCards .content {
+  background-color: rgb(66, 66, 157);
+}
+
+/* GRAPH */
+#graph {
+  background-color: rgba(127, 23, 192, 0.303);
+  border: 2px solid rgb(127, 23, 192);
+}
+#graph h2 {
+  border-left: 5px solid rgb(127, 23, 192);
+}
+#designCards .content {
+  background-color: rgb(127, 23, 192);
+}
+
+/* AUDIO */
+#audiovisuel {
+  background-color: rgba(255, 0, 115, 0.292);
+  border: 2px solid rgb(255, 0, 115);
+  margin-bottom: 10%;
+}
+#audiovisuel h2 {
+  border-left: 5px solid rgb(255, 0, 115);
+}
+#videoCards .content {
+  background-color: rgb(255, 0, 115);
+}

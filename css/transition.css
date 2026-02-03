@@ -1,0 +1,26 @@
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: rgb(255, 0, 115);
+  transform: translateX(100%);
+  z-index: 9999;
+}
+
+.page-transition.enter {
+  animation: slideIn 0.6s ease forwards;
+}
+
+.page-transition.exit {
+  animation: slideOut 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
